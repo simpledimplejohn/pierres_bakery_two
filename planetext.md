@@ -9,3 +9,5 @@ Plan for today:
 - map out objects, lists, dictionarys, classes, ints, strings, forms
 - begin build
 - complete project
+
+go over assigment and update code
