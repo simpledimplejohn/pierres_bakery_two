@@ -1,0 +1,16 @@
+@* shares a layout for all the files, access with Razor code emebeded in the files *@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome To Pierre's Bakery</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="~/css/styles.css">
+  </head>
+  <body>
+    @*  this is where we will load our views from *@
+    @RenderBody()
+    @*  and yes we are using async functions to do this *@
+    @await Html.PartialAsync("Footer")
+  </body>
+</html>
