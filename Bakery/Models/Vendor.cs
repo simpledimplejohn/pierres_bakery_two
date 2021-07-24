@@ -7,7 +7,7 @@ namespace Bakery.Models
     private static List<Vendor> _instances = new List<Vendor> {}; //this _instance will contain the category list
     public string Name { get; set; } // name of the category
     public int Id { get; }
-    public List<Order> Orderss { get; set; } // adding from the Items.cs file auto-implemented property
+    public List<Order> Orders { get; set; } // adding from the Items.cs file auto-implemented property
 
     public Vendor(string vendorName) // this makes the constructor with above info put in
     {
@@ -34,7 +34,7 @@ namespace Bakery.Models
 
     public void AddOrder(Order order) 
     {
-      Order.Add(order); // this adding Items to Items list in Category
+      Orders.Add(order); // this adding Items to Items list in Category
     }
 
   }

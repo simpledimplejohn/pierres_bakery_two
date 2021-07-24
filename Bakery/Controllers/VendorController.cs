@@ -5,7 +5,7 @@ using Bakery.Models;
 
 namespace Bakery.Controllers
 {
-  public class VendorController : Controller //looks in views/Categories
+  public class VendorsController : Controller //looks in views/Categories
   {
 
     [HttpGet("/vendors")] 
