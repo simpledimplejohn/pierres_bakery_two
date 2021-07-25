@@ -2,13 +2,13 @@
   Layout = "_Layout";
 }
 
-<h1>Bakery Orders Details: </h1>
+<h1>Bakery Orders For @Model["vendor"].Name</h1>
 
-<h2>@Model["order"].Title</h2>
-<p>@Model["order"].Description</p>
-<p>$@Model["order"].Price</p>
-<p>@Model["order"].Date</p>
-<h3>Vendor: @Model["vendor"].Name</h3>
+<p>Title: @Model["order"].Title</p>
+<p>Description: @Model["order"].Description</p>
+<p>Price $@Model["order"].Price</p>
+<p>Date @Model["order"].Date</p>
+
 @* square bracket notation for navigating a dictionary *@
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>

@@ -4,18 +4,23 @@
 
 @using Bakery.Models;
 
-<h1>Vendors</h1>
+<h1>Welcome to our Vendors Page</h1>
+<p>Here you can keep track of your orders</p>
 
+<h3>Are you a new vendor?</h3>
+<h4><a href='/vendors/new'>Click Here</a></h4>
+<br/>
+<h3>Here is a list of our vendors</h3>
 @if (@Model.Count == 0)
 {
-  <h3>No vendorss have been added yet!</h3>
+  <p>No vendors have been added yet!</p>
 } 
 
 @foreach (Vendor vendor in Model)
 {
-  <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
-  <p>@vendor.Description</p>
+  <h4>Name: <a href='/vendors/@vendor.Id'>@vendor.Name</a></h4>
+  <p>Description: @vendor.Description</p>
   @* its also a link to the path of the category.Id to a details page called Show.cshtml *@
 }
-
+<br/>
 <p><a href='/'>Back home</a></p>
