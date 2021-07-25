@@ -51,7 +51,7 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReutrnEmptyList_OrderList()
+    public void GetAll_ReturnEmptyList_OrderList()
     {
       List<Order> newList = new List<Order> {};
       
@@ -59,5 +59,26 @@ namespace Bakery.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnOrders_OrderList()
+    {
+      string title1 = "giant pie";
+      string description1 = "biggest pie we have";
+      int price1 = 50;
+      string date1 = "1/1/2050";
+      Order newOrder1 = new Order(title1, description1, price1, date1);
+      string title2 = "tiny pie";
+      string description2 = "smallest pie we have";
+      int price2 = 1;
+      string date2 = "1/1/2050";
+      Order newOrder2 = new Order(title2, description2, price2, date2);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
+
   }
 }
