@@ -37,5 +37,13 @@ namespace Bakery.Tests
       string result = newVendor.Description;
       Assert.AreEqual(description, result);
     }
+    public void GetId_ReturnsVendorID_Int()
+    {
+      string name = "test vendor";
+      string description = "test description";
+      Vendor newVendor = new Vendor(name, description);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
