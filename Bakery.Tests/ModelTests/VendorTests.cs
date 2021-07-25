@@ -28,5 +28,14 @@ namespace Bakery.Tests
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string name = "test vendor";
+      string description = "test description";
+      Vendor newVendor = new Vendor(name, description);
+      string result = newVendor.Description;
+      Assert.AreEqual(description, result);
+    }
   }
 }
