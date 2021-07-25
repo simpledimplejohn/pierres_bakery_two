@@ -11,7 +11,7 @@ namespace Bakery.Models
     public int Id { get; } // object property
     private static List<Order> _instances = new List<Order> { }; //_instance is the list, Item = descrition + list
 
-    public Order(string description, string title, int price, string date)
+    public Order(string title, string description, int price, string date)
     {
       Description = description;
       Title = title;
