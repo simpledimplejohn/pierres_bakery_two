@@ -10,7 +10,7 @@
   @* square bracket to grab key value pairs from dictionary called model passed into the view(model) *@
 @foreach (Order order in @Model["orders"])
 {
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
   @* itmes are nested within catigories in the link to th CategoriesContorler *@
 
 }
