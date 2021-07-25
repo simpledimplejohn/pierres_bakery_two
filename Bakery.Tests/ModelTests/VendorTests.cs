@@ -43,7 +43,9 @@ namespace Bakery.Tests
       string name = "test vendor";
       string description = "test description";
       Vendor newVendor = new Vendor(name, description);
+
       int result = newVendor.Id;
+
       Assert.AreEqual(1, result);
     }
     [TestMethod]
@@ -60,7 +62,20 @@ namespace Bakery.Tests
       List<Vendor> result = Vendor.GetAll();
 
       CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name1 = "test vendor1";
+      string description1 = "test description1";
+      Vendor newVendor1 = new Vendor(name1, description1);
+      string name2 = "test vendor2";
+      string description2 = "test description2";
+      Vendor newVendor2 = new Vendor(name2, description2);
 
+      Vendor result = Vendor.Find(2);
+
+      Assert.AreEqual(newVendor2, result);
     }
   }
 }
