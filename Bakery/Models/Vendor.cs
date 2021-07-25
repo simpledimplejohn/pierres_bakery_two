@@ -19,7 +19,7 @@ namespace Bakery.Models
 
     public static void ClearAll()
     {
-      _instances.Clear(); //static because its not somethig we need except for testing?  or applys to all catagory instance
+      _instances.Clear(); //static because its not something we need except for testing?  or applys to all catagory instance
     }
 
     public static List<Vendor> GetAll()
