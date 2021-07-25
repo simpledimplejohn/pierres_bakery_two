@@ -33,5 +33,21 @@ namespace Bakery.Tests
 
       Assert.AreEqual(title, result);
     }
+
+    [TestMethod]
+    public void SetTitle_SetTitle_string()
+    {
+      string title = "giant pie";
+      string description = "biggest pie we have";
+      int price = 50;
+      string date = "1/1/2050";
+      Order newOrder = new Order(title, description, price, date);
+
+      string updateTitle = "Giant Pie!";
+      newOrder.Title = updateTitle;
+      string result = newOrder.Title;
+
+      Assert.AreEqual(updateTitle, result);
+    }
   }
 }
