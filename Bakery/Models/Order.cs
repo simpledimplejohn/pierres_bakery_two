@@ -7,14 +7,16 @@ namespace Bakery.Models
     public string Title { get; set; }
     public string Description { get; set; } // object property
     public int Price { get; set; }
+    public string Date { get; set; }
     public int Id { get; } // object property
     private static List<Order> _instances = new List<Order> { }; //_instance is the list, Item = descrition + list
 
-    public Order(string description, string title, int price)
+    public Order(string description, string title, int price, string date)
     {
       Description = description;
       Title = title;
       Price = price;
+      Date = date;
       _instances.Add(this); //this refers to the Item in the constructor
       Id = _instances.Count; //gets the Id count an dmakes it accesable
     }
