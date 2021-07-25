@@ -6,12 +6,14 @@ namespace Bakery.Models
   {
     private static List<Vendor> _instances = new List<Vendor> {}; //this _instance will contain the category list
     public string Name { get; set; } // name of the category
+    public string Description { get; set; }
     public int Id { get; }
     public List<Order> Orders { get; set; } // adding from the Items.cs file auto-implemented property
 
-    public Vendor(string vendorName) // this makes the constructor with above info put in
+    public Vendor(string vendorName, string vendorDescription) // this makes the constructor with above info put in
     {
       Name = vendorName; //each of these is a _instance of the category list
+      Description = vendorDescription;
       _instances.Add(this); // adding the category instance to the category list from line 7
       Id = _instances.Count;
       Orders = new List<Order>{}; //instatiates the Item list thats inside this category _instance autoimplemented property for Itmes

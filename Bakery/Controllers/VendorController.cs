@@ -22,9 +22,9 @@ namespace Bakery.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create(string vendorName) // comes from New.cshtml even though its called create
+    public ActionResult Create(string vendorName, string vendorDescription) // comes from New.cshtml even though its called create
     {
-      Vendor newVendor = new Vendor(vendorName);
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
       return RedirectToAction("Index"); //after category is created sends us back to index
     }
 
