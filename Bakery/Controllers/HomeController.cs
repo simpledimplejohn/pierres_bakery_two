@@ -14,10 +14,10 @@ namespace Bakery.Controllers
         return View();
       }
 // REMOVE THIS LATER -- JUST FOR TESTING
-      [Route("/favorite_photos")] //adding photos from a view page
-      public ActionResult FavoritePhotos()
+      [Route("/AboutUs")] //adding photos from a view page
+      public ActionResult AboutUs()
       {
-        ViewData["message"] = "this is the message"; //a method called view data
+        //ViewData["message"] = "this is the message"; //a method called view data
         return View();
       }
 
